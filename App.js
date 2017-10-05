@@ -1,4 +1,3 @@
-$(document).ready(function(){
 // ZMIENNE
 	var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
 	var myHeaders = {
@@ -43,4 +42,3 @@ $(document).ready(function(){
 // 	}
 // 	return str;
 // }
-});

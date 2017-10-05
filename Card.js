@@ -1,4 +1,3 @@
-$(document).ready(function(){
 // KLASA KANBAN CARD
 	function Card(id, name) {
 		var self = this;
@@ -36,4 +35,3 @@ $(document).ready(function(){
 		  // this.element.remove();
 		}
 	}
-});

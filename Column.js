@@ -1,4 +1,3 @@
-$(document).ready(function(){
 	function Column(id, name) {
 		var self = this;
 
@@ -61,4 +60,3 @@ $(document).ready(function(){
 		  // this.element.remove();
 		}
 	};
-});
