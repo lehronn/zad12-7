@@ -6,7 +6,7 @@ body {margin: 0;}
 }
 .btn-edit {
   position: absolute;
-  right: 0;
+  right: 35px;
   top: 0;
   width: 22px;
   height: 22px;

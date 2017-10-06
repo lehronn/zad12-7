@@ -14,6 +14,7 @@
 
 			cardEditBtn.click(function() {
 				self.editCard();
+			});
 			cardDeleteBtn.click(function() {
 				self.removeCard();
 			});
@@ -23,8 +24,9 @@
 			cardDescription.text(self.name);
 			card.append(cardDescription)
 			return card;
+			}
 		}
-	}
+
 
 	// function editCard() {
 	// 	var card = $('.editCard')
@@ -41,5 +43,20 @@
 				}
 			});
 		  // this.element.remove();
+		},
+		editCard:  function() {
+			var self = this;
+			var newName = prompt('newName');
+			$.ajax({
+				url: baseUrl + '/card/' + self.id,
+				data: {
+					id: self.id,
+					name: newName
+				},
+				method: 'PUT',
+				success: function() {
+					self.element.edit();
+				}
+			});
 		}
 	}
