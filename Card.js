@@ -8,19 +8,27 @@
 
 		function createCard() {
 			var card = $('<li class="card"></li>');
+			var cardEditBtn = $('<button class="btn-edit">edit</button>');
 			var cardDeleteBtn = $('<button class="btn-delete">x</button>');
 			var cardDescription = $('<p class="card-description"></p>');
 
-			cardDeleteBtn.click(function(){
+			cardEditBtn.click(function() {
+				self.editCard();
+			cardDeleteBtn.click(function() {
 				self.removeCard();
 			});
 
+			card.append(cardEditBtn);
 			card.append(cardDeleteBtn);
 			cardDescription.text(self.name);
 			card.append(cardDescription)
 			return card;
 		}
 	}
+
+	// function editCard() {
+	// 	var card = $('.editCard')
+	// }
 
 	Card.prototype = {
 		removeCard: function() {
